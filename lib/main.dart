@@ -75,25 +75,60 @@ class _MyHomePageState extends State<MyHomePage> {
                   Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow,
+                        Padding(
+                        padding: const EdgeInsets.all(3),
+                        child: IconButton(
+                          onPressed: (){
+                            model.getAutoSelected.setCalificacion(1.0);
+                          },
+                        icon: model.getAutoSelected.calificacion > 0.1
+                            ? const Icon(Icons.star, color: Colors.yellow)
+                            : const Icon(Icons.star_border, color: Colors.yellow),
                         ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow,
+                        ),  
+                        Padding(
+                        padding: const EdgeInsets.all(3),
+                        child: IconButton(
+                          onPressed: (){
+                            model.getAutoSelected.setCalificacion(2.0);
+                          },
+                        icon: model.getAutoSelected.calificacion > 1.1
+                            ? const Icon(Icons.star, color: Colors.yellow)
+                            : const Icon(Icons.star_border, color: Colors.yellow),
                         ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow,
                         ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow,
+                        Padding(
+                        padding: const EdgeInsets.all(3),
+                        child: IconButton(
+                          onPressed: (){
+                            model.getAutoSelected.setCalificacion(3.0);
+                          },
+                        icon: model.getAutoSelected.calificacion > 2.1
+                            ? const Icon(Icons.star, color: Colors.yellow)
+                            : const Icon(Icons.star_border, color: Colors.yellow),
                         ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow,
+                        ),
+                        Padding(
+                        padding: const EdgeInsets.all(3),
+                        child: IconButton(
+                          onPressed: (){
+                            model.getAutoSelected.setCalificacion(4.0);
+                          },
+                        icon: model.getAutoSelected.calificacion > 3.1
+                            ? const Icon(Icons.star, color: Colors.yellow)
+                            : const Icon(Icons.star_border, color: Colors.yellow),
+                        ),
+                        ),
+                        Padding(
+                        padding: const EdgeInsets.all(3),
+                        child: IconButton(
+                          onPressed: (){
+                            model.getAutoSelected.setCalificacion(5.0);
+                          },
+                        icon: model.getAutoSelected.calificacion > 4.1
+                            ? const Icon(Icons.star, color: Colors.yellow)
+                            : const Icon(Icons.star_border, color: Colors.yellow),
+                        ),
                         ),
                       ]),
                   Text(
@@ -120,8 +155,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text("Ver detalles")),
           ],
+          
         ),
       ),
+      
     );
   }
 }
