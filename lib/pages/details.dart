@@ -10,7 +10,7 @@ class Second extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.indigo[900],
+            backgroundColor: Colors.blue,
             leading: const BackButton(
               color: Colors.white,
             ),
@@ -24,7 +24,18 @@ class Second extends StatelessWidget {
     return Consumer<AutosModel>(
       builder: (context, model, child) {
         return SingleChildScrollView(
-          child: Text(model.getAutoSelected.marca.toString()),
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                Text(model.getAutoSelected.marca.toString()),
+                Text(model.getAutoSelected.linea.toString()),
+                Text(model.getAutoSelected.precio.toString()),
+                Text(model.getAutoSelected.descripcion.toString()),
+                Text(model.getAutoSelected.calificacion.toString()),
+                Image.network(model.getAutoSelected.imagen.toString()),
+              ],
+            ),
+          ),
           
         );
       },

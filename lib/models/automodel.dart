@@ -8,7 +8,8 @@ class AutoModel extends BaseModel {
   String precio;
   String descripcion;
   double calificacion;
-  AutoModel(this.ano, this.marca, this.linea, this.precio, this.descripcion, this.calificacion){
+  String imagen;
+  AutoModel(this.ano, this.marca, this.linea, this.precio, this.descripcion, this.calificacion, this.imagen){
     setState(AutoState.init);
   }
   int get getAno => ano;

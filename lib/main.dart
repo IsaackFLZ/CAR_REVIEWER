@@ -144,7 +144,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Column(children: <Widget>[
               Image.network(
-                  "https://www.toyota.com/imgix/content/dam/toyota/jellies/max/2022/corolla/xseapexedition/1860/2nr/2.png?fm=png&bg=white&w=768&h=328&q=90"),
+                  auto.imagen,
+                height: 200,
+                width: 200,
+              ),
             ]),
             TextButton(
                 onPressed: () {
